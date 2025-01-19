@@ -1,0 +1,38 @@
+.verify-button {
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.completedTasks {
+  display: flex;
+  justify-content: space-between;
+  max-height: 456px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  padding-right: 30px;
+}
+
+.popupBoxStyle {
+  background-color: rgb(159, 239, 231);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px
+}
+
+.popupBox {
+position: fixed;
+top: 0;
+left: 0;
+width:100vw;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content:center;
+align-items:center;
+}

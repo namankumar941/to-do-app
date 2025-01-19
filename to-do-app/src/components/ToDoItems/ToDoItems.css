@@ -1,0 +1,23 @@
+li {
+    background: lightgrey;
+    border: 3px solid rgb(13, 1, 1);
+    width: 300px;
+    margin: 10px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+
+.itemContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.button {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
