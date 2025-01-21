@@ -44,6 +44,7 @@ Create a `.env` file in ./server with the following variables:
 - `PRIVATE_KEY=""`
 - `SEPOLIA_RPC_URL=""`
 - `API_KEY=""`
+   
 **Replace:**
 
 - `WALLET_ADDRESS with your wallet address.`
