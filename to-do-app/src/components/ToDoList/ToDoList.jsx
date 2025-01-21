@@ -5,7 +5,24 @@ import "./ToDoList.css";
 function ToDoList(data) {
   return (
     <div className="listContainer">
-      <ol>
+      {!data.items ? (
+        <p>No todos available</p>
+      ) : (
+        <ol>
+          {data.items.map((item) => (
+            <ToDoItems
+              updateCompletedTask={data.updateCompletedTask}
+              updateMyToDoList={data.updateMyToDoList}
+              userName={data.userName}
+              taskId={item.taskId}
+              key={item.taskId}
+              dueDate={item.dueDate}
+              title={item.taskDetails}
+            />
+          ))}
+        </ol>
+      )}
+      {/* <ol>
         {data.items.map((item) => (
           <ToDoItems
             updateCompletedTask={data.updateCompletedTask}
@@ -17,7 +34,7 @@ function ToDoList(data) {
             title={item.taskDetails}
           />
         ))}
-      </ol>
+      </ol> */}
     </div>
   );
 }

@@ -5,7 +5,20 @@ import CompletedTaskItems from "./completedTaskItems";
 function CompletedTask(data) {
   return (
     <div className="completedTasks">
-      <ol>
+      {!data.items ? (
+        <p>No completed Tasks available</p>
+      ) : (
+        <ol>
+          {data.items.map((completedTask) => (
+            <CompletedTaskItems
+              key={completedTask.taskId}
+              completionDate={completedTask.dueDate}
+              title={completedTask.taskDetails}
+            />
+          ))}
+        </ol>
+      )}
+      {/* <ol>
         {data.items.map((completedTask) => (
           <CompletedTaskItems
             key={completedTask.taskId}
@@ -13,7 +26,7 @@ function CompletedTask(data) {
             title={completedTask.taskDetails}
           />
         ))}
-      </ol>
+      </ol> */}
     </div>
   );
 }
